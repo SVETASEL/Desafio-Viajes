@@ -1,0 +1,29 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+/* abstracts */
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+/* Base */
+
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+
+/* Components */
+@import "components/buttons";
+@import "components/cards";
+@import "components/carousel";
+@import "components/inputs";
+
+/* Layout */
+
+@import "layout/header";
+@import "layout/destacados";
+@import "layout/contact";
+@import "layout/who";
+@import "layout/reviews";
+
+/* pages */
+
+@import "pages/home";

@@ -1,0 +1,37 @@
+@use "../abstracts/variables";
+
+.btn {
+  padding: $sp2 15px;
+  border-radius: 10px;
+
+  font-size: $font16;
+  font-weight: $font-bold;
+  text-align: center;
+
+  & a {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  &--adl {
+    background-color: $green-adl;
+    & a {
+      color: $white;
+    }
+    justify-content: center;
+  }
+
+  &--green {
+    background-color: $green-adl;
+    border: none;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+  &--text-black {
+    color: $black;
+    background-color: $grey;
+  }
+}

@@ -1,0 +1,11 @@
+.text-container {
+  border-bottom: 1px solid $white;
+}
+
+.somos {
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,18 @@
+.contact {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+
+    & i {
+      color: $white;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+  &__item:first-child {
+    margin-top: 0;
+  }
+}

@@ -1,8 +1,10 @@
-var swiper = new Swiper(".mySwiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+
+const myCarouselElement = document.querySelector("#carouselViajes");
+
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 2000,
+  touch: false,
 });
 
 const tooltipTriggerList = document.querySelectorAll(
@@ -12,25 +14,29 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
-$("#enviarCorreo").click(function () {
-  alert("Correo enviado exitosamente!");
+const myModal = document.getElementById("termsModal");
+const myInput = document.getElementById("myInput");
+
+myModal.addEventListener("shown.bs.modal", () => {
+  myInput.focus();
 });
 
-$("p, #ingredients").on("dblclick", function () {
-  $(this).css({
-    color: "red",
-  });
-});
+const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    "</div>",
+  ].join("");
 
-$("p, #preparacion").on("dblclick", function () {
-  $(this).css({
-    color: "red",
-  });
-});
+  alertPlaceholder.append(wrapper);
+};
 
-$(".card-title").on("click", function () {
-  $(this).css({
-    cursor: "pointer",
+const alertTrigger = document.getElementById("liveAlertBtn");
+if (alertTrigger) {
+  alertTrigger.addEventListener("click", () => {
+    appendAlert("Tu mensaje fue enviado con éxito!", "success");
   });
-  $(".card-text").toggle("slow", function () {});
-});
+}

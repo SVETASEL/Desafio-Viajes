@@ -1,0 +1,19 @@
+.carousel-inner {
+  height: 500px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 375px) {
+  .carousel-inner {
+    height: 300px;
+  }
+
+  .carousel-image {
+    height: 300px;
+  }
+}

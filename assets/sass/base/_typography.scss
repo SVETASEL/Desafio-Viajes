@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  font-family: $open-font;
+  background-color: $black;
+}
+
+h2 {
+  font-weight: $font-bold;
+}
+
+h3 {
+  font-size: $font20;
+  font-weight: $font-thin;
+}
+h4 {
+  font-size: $font24;
+  font-weight: $font-thin;
+}
+
+.text-beige {
+  color: $beige;
+}
